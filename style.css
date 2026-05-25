@@ -1,0 +1,709 @@
+*{
+
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+
+}
+
+body{
+
+  background:#111;
+  color:white;
+  scroll-behavior:smooth;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+  position:fixed;
+  width:100%;
+  top:0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 40px;
+
+  background:rgba(0,0,0,0.7);
+
+  backdrop-filter:blur(10px);
+
+  z-index:1000;
+
+}
+
+.navbar h1{
+
+  color:#00ff88;
+  font-size:28px;
+
+}
+
+.navbar ul{
+
+  display:flex;
+  gap:20px;
+
+  list-style:none;
+  flex-wrap:wrap;
+
+}
+
+.navbar a{
+
+  color:white;
+  text-decoration:none;
+
+  transition:0.3s;
+  font-size:17px;
+
+}
+
+.navbar a:hover{
+
+  color:#00ff88;
+
+}
+
+/* HERO */
+
+.hero{
+
+  height:100vh;
+
+  background:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1920');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  position:relative;
+
+}
+
+.overlay{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.65);
+
+}
+
+.hero-content{
+
+  position:relative;
+  z-index:2;
+
+  max-width:900px;
+
+  padding:20px;
+
+}
+
+.hero h2{
+
+  font-size:60px;
+
+  margin-bottom:20px;
+
+  line-height:1.2;
+
+}
+
+.hero p{
+
+  font-size:20px;
+
+  line-height:1.8;
+
+  margin-bottom:30px;
+
+  color:#ddd;
+
+}
+
+.hero button{
+
+  padding:15px 35px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#00ff88;
+
+  color:black;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.hero button:hover{
+
+  transform:scale(1.05);
+
+}
+
+/* SECCIONES */
+
+.section{
+
+  padding:120px 8%;
+
+}
+
+.dark{
+
+  background:#1b1b1b;
+
+}
+
+.title{
+
+  text-align:center;
+
+  font-size:50px;
+
+  margin-bottom:60px;
+
+  color:#00ff88;
+
+}
+
+/* CARDS */
+
+.cards{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:35px;
+
+}
+
+.card{
+
+  background:#222;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  transition:0.4s;
+
+  box-shadow:0 0 15px rgba(0,0,0,0.5);
+
+}
+
+.card:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:0 0 25px rgba(0,255,136,0.3);
+
+}
+
+.card img{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  display:block;
+
+}
+
+.card-content{
+
+  padding:25px;
+
+}
+
+.card h3{
+
+  margin-bottom:15px;
+
+  color:#00ff88;
+
+  font-size:28px;
+
+}
+
+.card p{
+
+  line-height:1.7;
+
+  color:#ddd;
+
+  font-size:16px;
+
+}
+
+.card span{
+
+  display:block;
+
+  margin-top:20px;
+
+  color:#aaa;
+
+  font-weight:bold;
+
+}
+
+/* IMPACTOS Y JUSTICIA */
+
+.impact-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:30px;
+
+}
+
+.impact-box{
+
+  background:#222;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  transition:0.3s;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+}
+
+.impact-box:hover{
+
+  transform:translateY(-10px);
+
+  border:1px solid #00ff88;
+
+  box-shadow:0 0 20px rgba(0,255,136,0.2);
+
+}
+
+.impact-box h3{
+
+  margin-bottom:20px;
+
+  color:#00ff88;
+
+  font-size:26px;
+
+}
+
+.impact-box p{
+
+  line-height:1.8;
+
+  color:#ddd;
+
+}
+
+/* SOSTENIBILIDAD */
+
+.sostenibilidad-container{
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  gap:50px;
+
+  flex-wrap:wrap;
+
+}
+
+.texto{
+
+  flex:1;
+
+  min-width:300px;
+
+}
+
+.texto p{
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+
+  color:#ddd;
+
+}
+
+.sostenibilidad-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+
+  margin-top:30px;
+
+}
+
+.s-item{
+
+  background:#222;
+
+  padding:25px;
+
+  border-radius:18px;
+
+  transition:0.3s;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+}
+
+.s-item:hover{
+
+  transform:translateY(-8px);
+
+  border:1px solid #00ff88;
+
+  box-shadow:0 0 20px rgba(0,255,136,0.2);
+
+}
+
+.s-item h3{
+
+  color:#00ff88;
+
+  margin-bottom:15px;
+
+  font-size:24px;
+
+}
+
+.s-item p{
+
+  color:#ddd;
+
+  line-height:1.7;
+
+}
+
+/* CÍRCULO */
+
+.circle{
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:#00ff88;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:90px;
+
+  color:black;
+
+  font-weight:bold;
+
+  box-shadow:0 0 30px rgba(0,255,136,0.5);
+
+}
+
+/* CRUCIGRAMA */
+
+.crucigrama-layout{
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:60px;
+  flex-wrap:wrap;
+
+}
+
+.crucigrama-texto{
+
+  text-align:center;
+  margin-bottom:40px;
+  font-size:18px;
+  color:#ccc;
+
+}
+
+.preguntas{
+
+  max-width:500px;
+
+}
+
+.preguntas h3{
+
+  color:#00ff88;
+  margin-bottom:20px;
+
+}
+
+.preguntas ol{
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  line-height:1.7;
+
+}
+
+.crossword{
+
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+
+  background:#1a1a1a;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+
+}
+
+.row{
+
+  display:flex;
+  gap:5px;
+
+}
+
+.row input{
+
+  width:45px;
+  height:45px;
+
+  text-align:center;
+
+  font-size:22px;
+  font-weight:bold;
+
+  text-transform:uppercase;
+
+  background:#222;
+  color:white;
+
+  border:1px solid #00ff88;
+  border-radius:8px;
+
+  outline:none;
+
+  transition:0.3s;
+
+}
+
+.row input:focus{
+
+  background:#2b2b2b;
+
+  box-shadow:0 0 10px rgba(0,255,136,0.5);
+
+}
+
+.row input:hover{
+
+  transform:scale(1.05);
+
+}
+
+.black{
+
+  width:45px;
+  height:45px;
+
+  background:#111;
+
+  border-radius:8px;
+
+}
+
+.crucigrama-boton{
+
+  margin-top:25px;
+
+  text-align:center;
+
+}
+
+.crucigrama-boton button{
+
+  padding:15px 30px;
+
+  border:none;
+  border-radius:12px;
+
+  background:#00ff88;
+
+  color:black;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.crucigrama-boton button:hover{
+
+  transform:scale(1.05);
+
+}
+
+#resultadoCrucigrama{
+
+  margin-top:20px;
+
+  font-size:22px;
+
+  text-align:center;
+
+  color:#00ff88;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  padding:35px;
+
+  text-align:center;
+
+  background:black;
+
+  color:#aaa;
+
+  font-size:16px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero h2{
+
+    font-size:42px;
+
+  }
+
+  .hero p{
+
+    font-size:18px;
+
+  }
+
+  .navbar{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:20px;
+
+  }
+
+  .navbar ul{
+
+    justify-content:center;
+
+  }
+
+  .crucigrama-layout{
+
+    flex-direction:column;
+    align-items:center;
+
+  }
+
+}
+
+@media(max-width:600px){
+
+  .title{
+
+    font-size:35px;
+
+  }
+
+  .hero h2{
+
+    font-size:32px;
+
+  }
+
+  .hero p{
+
+    font-size:16px;
+
+  }
+
+  .card img{
+
+    height:180px;
+
+  }
+
+  .circle{
+
+    width:200px;
+    height:200px;
+
+    font-size:70px;
+
+  }
+
+  .row input,
+  .black{
+
+    width:35px;
+    height:35px;
+
+    font-size:18px;
+
+  }
+
+}
